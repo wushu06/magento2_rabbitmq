@@ -1,6 +1,7 @@
 ## Import csv data into `search_synonyms` table using Rabbitmq
 
-`
+add variables to env.php
+```
     'queue' => [
         'amqp' => [
             'host' => 'localhost',
@@ -10,7 +11,7 @@
             'virtualhost' => '/'
         ]
     ],
-`
+```
 place `test.csv` in `var` folder.
 
 run `$ bin/magento wam:sync:data` to import `test.csv` and for it to be published and added to the queue.
